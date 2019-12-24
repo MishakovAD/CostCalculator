@@ -1,7 +1,7 @@
 package logger.config;
 
 import logger.BPP.LoggerHandlerBeanPostProcessor;
-import logger.Logger;
+import logger.controller.LogController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,7 +13,7 @@ public class LogConfig {
   }
 
   @Bean
-  public Logger logger() {
-    return new Logger();
+  public LogController loggerController() {
+    return new LogController();
   }
 }
