@@ -1,11 +1,15 @@
 package cc.BusinessLogicLayer.obj;
 
+import static help.HelpUtils.uniqueId;
+
 import cc.BusinessLogicLayer.Exceptions.UserNotFoundException;
 import cc.PercistanceLayer.dao.costs.CostsCalculatorDA;
 import cc.PercistanceLayer.entity.Cost;
 import cc.PercistanceLayer.entity.Income;
 import cc.PercistanceLayer.entity.Money;
 import cc.PercistanceLayer.entity.users.User;
+import java.util.Random;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -17,6 +21,10 @@ import java.util.List;
 @Component
 @Lazy
 public class WalletImpl implements Wallet {
+    public static final String INCOME_PREFIX = "income_";
+    public static final String MONEY_PREFIX = "money_";
+    public static final String COST_PREFIX = "cost_";
+
     @Autowired
     private CostsCalculatorDA costsCalculatorDA;
 
@@ -78,7 +86,9 @@ public class WalletImpl implements Wallet {
     }
 
     private void addNewIncome(User user, String description) {
+        String incomeId = INCOME_PREFIX + uniqueId();
         Income income = Income.builder()
+                .incomeId(incomeId)
                 .user(user)
                 .description(description)
                 .amount(0)
@@ -91,7 +101,9 @@ public class WalletImpl implements Wallet {
     }
 
     private void addNewMoney(User user, String description) {
+        String moneyId = MONEY_PREFIX + uniqueId();
         Money money = Money.builder()
+                .moneyId(moneyId)
                 .user(user)
                 .description(description)
                 .amount(0)
@@ -105,7 +117,9 @@ public class WalletImpl implements Wallet {
     }
 
     private void addNewCost(User user, String description) {
+        String costId = COST_PREFIX + uniqueId();
         Cost cost = Cost.builder()
+                .costId(costId)
                 .user(user)
                 .description(description)
                 .amount(0)

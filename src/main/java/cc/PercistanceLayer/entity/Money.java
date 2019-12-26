@@ -12,22 +12,12 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 public class Money extends Entity {
-    private long moneyId;
+    private long id;
+    private String moneyId;
     private User user;
     private String description;
     private int amount;
     private boolean deleted;
     private String createdDate;
     private String deletedDate;
-
-    public static void main(String[] args) {
-        Money money = Money.builder()
-                .user(new User())
-                .description("")
-                .amount(100)
-                .deleted(false)
-                .createdDate(LocalDateTime.now().toString())
-                .deletedDate("")
-                .build();
-    }
 }

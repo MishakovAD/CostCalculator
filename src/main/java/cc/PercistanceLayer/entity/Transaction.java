@@ -7,8 +7,10 @@ import java.time.LocalDateTime;
 public class Transaction {
     private long transactionId;
     private User user;
-    private int amount;
-    private Entity from;
-    private Entity to;
     private String transactionDate;
+    private int amount;
+    private Entity from; //Если не получится, то тут тогда просто уникальные айдишники.
+    private Entity to; //Можно просто вытаскивать из сущности, передаваемой сюда.
+    private boolean deleted;
+    private String deletedDate;
 }

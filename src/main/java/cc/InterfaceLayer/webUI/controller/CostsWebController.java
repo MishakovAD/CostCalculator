@@ -4,35 +4,26 @@ import cc.BusinessLogicLayer.factory.WalletFactory;
 import cc.BusinessLogicLayer.obj.Wallet;
 import cc.InterfaceLayer.Exceptions.UserUnsupportedException;
 import cc.PercistanceLayer.entity.users.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
-
 import java.util.HashMap;
 import java.util.Map;
+import logger.annotations.Log;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@RestController
+@Log
+@Controller
 public class CostsWebController {
     @Autowired
     private WalletFactory walletFactory;
 
     private Map<User, Wallet> cache = new HashMap<>();
 
-    public String registration() {
-//        cache.put(new User(), walletFactory.getNewWallet());
-        return "";
-    }
+    @RequestMapping("/index")
+    public String index() {
 
-    public String login() {
-        Wallet wallet;
-//        if (cache.get(user) == null) {
-//            wallet = walletFactory.getWallet(user);
-//            cache.put(user, wallet);
-//        } else {
-//            wallet = cache.get(user);
-//        }
-        return "";
+        return "index";
     }
-
     public String update() throws UserUnsupportedException {
         Wallet wallet;
 //        if (cache.get(user) == null) {

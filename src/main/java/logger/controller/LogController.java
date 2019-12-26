@@ -4,7 +4,6 @@ import logger.annotations.Log;
 import org.springframework.stereotype.Component;
 
 @Log
-@Component
 public class LogController implements LogControllerMBean {
     private boolean enabled = true;
 

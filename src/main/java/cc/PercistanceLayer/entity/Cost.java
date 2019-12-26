@@ -9,7 +9,8 @@ import lombok.Setter;
 @Setter
 @Builder
 public class Cost extends Entity {
-    public long costId;
+    private long id;
+    private String costId;
     private User user;
     private String description;
     private int amount;

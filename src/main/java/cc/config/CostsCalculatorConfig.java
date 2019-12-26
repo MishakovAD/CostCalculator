@@ -2,6 +2,7 @@ package cc.config;
 
 import cc.BusinessLogicLayer.factory.WalletFactory;
 import cc.BusinessLogicLayer.factory.WalletFactoryImpl;
+import cc.InterfaceLayer.webUI.controller.CostsWebController;
 import cc.PercistanceLayer.dao.costs.CostsCalculatorDA;
 import cc.PercistanceLayer.dao.costs.CostsDAO;
 import cc.PercistanceLayer.dao.users.UserDA;
@@ -30,10 +31,10 @@ public class CostsCalculatorConfig {
         };
     }
 
-    @Bean
-    public UserDA userDAO() {
-        return new UserDAO();
-    }
+//    @Bean
+//    public UserDA userDAO() {
+//        return new UserDAO();
+//    }
 
     @Bean
     public CostsCalculatorDA costsDA() {

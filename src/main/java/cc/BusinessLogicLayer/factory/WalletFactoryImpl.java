@@ -16,5 +16,6 @@ public abstract class WalletFactoryImpl implements WalletFactory {
         return wallet;
     }
 
+    @Override
     public abstract Wallet getNewWallet(); //TODO учеба: Это лукап метод, для примера отлично.
 }
