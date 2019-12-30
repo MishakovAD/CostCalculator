@@ -1,4 +1,4 @@
-package cc.PercistanceLayer.dao.users;
+package cc.PercistanceLayer.dao.hibernate.users;
 
 import cc.PercistanceLayer.entity.users.User;
 

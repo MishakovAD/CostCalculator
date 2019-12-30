@@ -9,19 +9,18 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
-import logger.annotations.Log;
-import logger.controller.LogType;
-import logger.controller.LogController;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.stereotype.Component;
-
 import javax.management.InstanceAlreadyExistsException;
 import javax.management.MBeanRegistrationException;
 import javax.management.MBeanServer;
 import javax.management.MalformedObjectNameException;
 import javax.management.NotCompliantMBeanException;
 import javax.management.ObjectName;
+import logger.annotations.Log;
+import logger.controller.LogController;
+import logger.controller.LogType;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Component;
 
 @Component
 public class LoggerHandlerBeanPostProcessor implements BeanPostProcessor {

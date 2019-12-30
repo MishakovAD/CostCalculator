@@ -1,4 +1,4 @@
-package cc.PercistanceLayer.dao.costs;
+package cc.PercistanceLayer.dao.hibernate.costs;
 
 import cc.PercistanceLayer.entity.Cost;
 import cc.PercistanceLayer.entity.Income;
@@ -6,7 +6,9 @@ import cc.PercistanceLayer.entity.Money;
 
 import java.util.LinkedList;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CostsDAO implements CostsCalculatorDA {
     @Override
     public List<Income> getIncomesBasket(long userId) {

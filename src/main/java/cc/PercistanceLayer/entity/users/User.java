@@ -1,54 +1,20 @@
 package cc.PercistanceLayer.entity.users;
 
-import org.springframework.stereotype.Component;
+import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Пользователь.
  */
+@Getter
+@Setter
 public class User {
     private long userId;
-    private String firstName;
-    private String lastName;
     private String email; //TODO: Возможно длдя емайла и пароля сделать одельные сущности, где в них будет вся обработка.
     private String password;
-
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    private String firstName;
+    private String lastName;
+    private LocalDateTime birthday;
+    private String sex;
 }

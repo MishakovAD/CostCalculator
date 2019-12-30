@@ -21,6 +21,7 @@
   </build>
 
   <dependencies>
+    <!-- <Spring> -->
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
@@ -41,8 +42,20 @@
       <artifactId>spring-boot-starter-web</artifactId>
       <version>2.2.1.RELEASE</version>
     </dependency>
+    <!-- </Spring> -->
+
+    <!-- <DATA BASE> -->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.4.10.Final</version>
+    </dependency>
+    <!-- </DATA BASE> -->
 
 
+
+    <!-- <additional> -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -62,9 +75,10 @@
       <artifactId>tomcat-embed-jasper</artifactId>
       <version>9.0.27</version>
     </dependency>
+    <!-- </additional> -->
 
 
-    <!-- TEST -->
+    <!-- <TEST> -->
     <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
     <dependency>
       <groupId>org.mockito</groupId>
@@ -80,6 +94,7 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    <!-- </TEST> -->
 
   </dependencies>
 

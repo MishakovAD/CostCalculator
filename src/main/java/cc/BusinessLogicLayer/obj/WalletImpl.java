@@ -3,23 +3,16 @@ package cc.BusinessLogicLayer.obj;
 import static help.HelpUtils.uniqueId;
 
 import cc.BusinessLogicLayer.Exceptions.UserNotFoundException;
-import cc.PercistanceLayer.dao.costs.CostsCalculatorDA;
+import cc.PercistanceLayer.dao.hibernate.costs.CostsCalculatorDA;
 import cc.PercistanceLayer.entity.Cost;
 import cc.PercistanceLayer.entity.Income;
 import cc.PercistanceLayer.entity.Money;
 import cc.PercistanceLayer.entity.users.User;
-import java.util.Random;
-import java.util.UUID;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@Component
-@Lazy
 public class WalletImpl implements Wallet {
     public static final String INCOME_PREFIX = "income_";
     public static final String MONEY_PREFIX = "money_";

@@ -1,4 +1,4 @@
-package cc.PercistanceLayer.dao.costs;
+package cc.PercistanceLayer.dao.hibernate.costs;
 
 import cc.PercistanceLayer.entity.Cost;
 import cc.PercistanceLayer.entity.Income;

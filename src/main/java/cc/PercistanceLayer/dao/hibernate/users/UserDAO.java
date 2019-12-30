@@ -1,9 +1,7 @@
-package cc.PercistanceLayer.dao.users;
+package cc.PercistanceLayer.dao.hibernate.users;
 
 import cc.PercistanceLayer.entity.users.User;
-import org.springframework.stereotype.Component;
 
-@Component
 public class UserDAO implements UserDA{
     @Override
     public boolean registration(User user) {
